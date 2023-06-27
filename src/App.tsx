@@ -1,12 +1,8 @@
-import { Home } from "./components/main/home"
-import { Player } from "./components/player/player"
-import { Sidebar } from "./components/sidebar/sidebar"
 import homeicon from './assets/home-iconn.svg'
 import searchicon from './assets/search-icon.svg'
 import libraryicon from './assets/library-icon.svg'
 import addicon from './assets/add-icon.svg'
 import rarrowicon from './assets/arrow-right-icon.svg'
-import album from './assets/rhcp-album.jpeg'
 import californication from './assets/californication.jpg'
 import loop from './assets/loop-icon.svg'
 import shuffle from './assets/shuffle-icon.svg'
@@ -18,9 +14,8 @@ import volume from './assets/volume.svg'
 import fullscreen from './assets/fullscreen.svg'
 import mic from './assets/micro.svg'
 import queue from './assets/queue.svg'
-
-
-
+import chevronr from './assets/rchevron.svg'
+import chevronl from './assets/lchevron.svg'
 
 function App() {
 
@@ -112,7 +107,52 @@ function App() {
           </div>
         </aside>
 
-        <main className="text-white bg-[#121212] grow rounded">
+        <main className="text-white bg-[#121212] grow rounded px-6 py-4">
+          <div className='flex gap-2'>
+            <img src={chevronl} alt="" className='w-8 p-1 bg-black rounded-full' />
+            <img src={chevronr} alt="" className='w-8 p-1 bg-black rounded-full' />
+          </div>
+
+          <h1 className='font-bold text-2xl mt-4'>Boa tarde!</h1>
+
+          <div className="grid grid-cols-3 gap-4 mt-6">
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 1
+            </div>
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 2
+            </div>
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 3
+            </div>
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 4
+            </div>
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 5
+            </div>
+            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
+              <img src={californication} alt="" className="w-20" />
+              Playlist 6
+            </div>
+          </div>
+
+          <h1 className='font-bold text-2xl mt-4'>Tocados recentemente</h1>
+
+          <div className='flex mt-6 gap-4'>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+          </div>
         </main>
       </div>
 
