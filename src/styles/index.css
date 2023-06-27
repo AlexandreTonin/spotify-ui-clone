@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+.filtro::-webkit-scrollbar {
+  background-color: #121212;
+  height: 8px;
+}
+
+.filtro::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.album {
+    background-image: url("../assets/rhcp.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.albumplaying {
+    background-image: url("../assets/californication.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
