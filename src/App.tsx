@@ -7,6 +7,20 @@ import libraryicon from './assets/library-icon.svg'
 import addicon from './assets/add-icon.svg'
 import rarrowicon from './assets/arrow-right-icon.svg'
 import album from './assets/rhcp-album.jpeg'
+import californication from './assets/californication.jpg'
+import loop from './assets/loop-icon.svg'
+import shuffle from './assets/shuffle-icon.svg'
+import pause from './assets/pause-icon.svg'
+import skipback from './assets/skipback.svg'
+import skipfwd from './assets/skipfwrd.svg'
+import boombox from './assets/boombox.svg'
+import volume from './assets/volume.svg'
+import fullscreen from './assets/fullscreen.svg'
+import mic from './assets/micro.svg'
+import queue from './assets/queue.svg'
+
+
+
 
 function App() {
 
@@ -99,21 +113,40 @@ function App() {
         </aside>
 
         <main className="text-white bg-[#121212] grow rounded">
-
         </main>
       </div>
 
       <footer className="text-white mt-2 items-center bg-black h-16 flex px-4 justify-between">
-        <div className="flex-1">
-          adasdasdasdasdasdasdasdas
+        <div className="flex gap-2 items-center">
+          <img src={californication} alt="" className="w-12" />
+          <div>
+            <p>Californication</p>
+            <p className="text-xs text-zinc-400">Red Hot Chilli Peppers</p>
+          </div>
         </div>
-        <div className="flex-1 flex justify-center">
-          <p>oi</p>
-          <p>da</p>
-          <p>das</p>
+        <div className="flex flex-col">
+          <div className="flex gap-4 justify-center">
+            <img src={shuffle} alt="" className="w-6 opacity-70" />
+            <img src={skipfwd} alt="" className="w-6 opacity-70" />
+            <img src={pause} alt="" className="w-10 opacity-90" />
+            <img src={skipback} alt="" className="w-6 opacity-70" />
+            <img src={loop} alt="" className="w-6 opacity-70" />
+          </div>
+          <div>
+            <div className="flex items-center gap-4">
+              <p className="text-xs text-zinc-400">01:15</p>
+              <div className="flex h-1 bg-zinc-500 rounded w-96"><div className="flex h-1 bg-white rounded w-48"></div></div>
+              <p className="text-xs text-zinc-400">02:30</p>
+            </div>
+          </div>
         </div>
-        <div className="flex-1 flex justify-end">
-          ccccaaaaaaaaaaaa
+        <div className="flex gap-4 items-center">
+          <img src={mic} alt="" className="w-5 opacity-70" />
+          <img src={queue} alt="" className="w-5 opacity-70" />
+          <img src={boombox} alt="" className="w-5 opacity-70" />
+          <img src={volume} alt="" className="w-5 opacity-70" />
+          <div className="flex h-1 bg-zinc-500 rounded w-24"><div className="flex h-1 bg-white rounded w-48"></div></div>
+          <img src={fullscreen} alt="" className="w-5 opacity-70" />
         </div>
       </footer>
     </div>
