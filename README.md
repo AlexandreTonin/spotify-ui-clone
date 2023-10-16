@@ -5,8 +5,8 @@ Este repositório contém um projeto de clone da interface de usuário (UI) do S
 ## Demonstração
 [https://spotclone.vercel.app](https://spotclone.vercel.app)
 
-## Capturas de Tela
-![image](https://github.com/AlexandreTonin/spotify-ui-clone/assets/107586000/59d160b1-ee0b-483c-ae6f-ad4d2d61a23e)
+## Captura de Tela
+![image](https://github.com/AlexandreTonin/spotify-ui-clone/assets/107586000/d989d6a7-ad1e-4958-a59e-2cfcb683df7b)
 
 ## Tecnologias Utilizadas
 
