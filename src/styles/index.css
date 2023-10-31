@@ -17,7 +17,6 @@
 }
 
 .album {
-    background-image: url("../assets/rhcp.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

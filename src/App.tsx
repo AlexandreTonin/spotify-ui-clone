@@ -4,6 +4,14 @@ import libraryicon from './assets/library-icon.svg'
 import addicon from './assets/add-icon.svg'
 import rarrowicon from './assets/arrow-right-icon.svg'
 import californication from './assets/californication.jpg'
+import nirvana from './assets/nirvana.png'
+import queen from './assets/queen.jpg'
+import aero from './assets/aerosmith.jpg'
+import pinkf from './assets/pinkfloyd.svg'
+import metallica from './assets/metallica.jpg'
+import acdc from './assets/acdc.jpg'
+import kiss from './assets/kiss.jpg'
+import strokes from './assets/thestrokes.png'
 import loop from './assets/loop-icon.svg'
 import shuffle from './assets/shuffle-icon.svg'
 import pause from './assets/pause-icon.svg'
@@ -16,6 +24,9 @@ import mic from './assets/micro.svg'
 import queue from './assets/queue.svg'
 import chevronr from './assets/rchevron.svg'
 import chevronl from './assets/lchevron.svg'
+import Playlist from './components/Playlist'
+import MainPlaylist from './components/MainPlaylist'
+import RecentlyPlayed from './components/RecentlyPlayed'
 
 function App() {
 
@@ -58,50 +69,15 @@ function App() {
             </div>
 
             <div className="mt-4 flex flex-col gap-4 grow">
-              <a href="#" className="flex items-center">
-                <div className="album w-12 h-full rounded mr-3">
-                </div>
-                <div>
-                  <p>Red Hot Chilli Peppers</p>
-                  <p className="text-gray-400">Playlist • Alexandre Tonin</p>
-                </div>
-              </a>
-
-              <a href="#" className="flex items-center">
-                <div className="album w-12 h-full rounded mr-3">
-                </div>
-                <div>
-                  <p>Red Hot Chilli Peppers</p>
-                  <p className="text-gray-400">Playlist • Alexandre Tonin</p>
-                </div>
-              </a>
-
-              <a href="#" className="flex items-center">
-                <div className="album w-12 h-full rounded mr-3">
-                </div>
-                <div>
-                  <p>Red Hot Chilli Peppers</p>
-                  <p className="text-gray-400">Playlist • Alexandre Tonin</p>
-                </div>
-              </a>
-
-              <a href="#" className="flex items-center">
-                <div className="album w-12 h-full rounded mr-3">
-                </div>
-                <div>
-                  <p>Red Hot Chilli Peppers</p>
-                  <p className="text-gray-400">Playlist • Alexandre Tonin</p>
-                </div>
-              </a>
-
-              <a href="#" className="flex items-center">
-                <div className="album w-12 h-full rounded mr-3">
-                </div>
-                <div>
-                  <p>Red Hot Chilli Peppers</p>
-                  <p className="text-gray-400">Playlist • Alexandre Tonin</p>
-                </div>
-              </a>
+              <Playlist playlistName="Red Hot Chilli Peppers" cover="bg-[url('../assets/rhcp.jpg')]" />
+              <Playlist playlistName="Nirvana" cover="bg-[url('../assets/nirvana.png')]" />
+              <Playlist playlistName="Queen" cover="bg-[url('../assets/queen.jpg')]" />
+              <Playlist playlistName="Metallica" cover="bg-[url('../assets/metallica.jpg')]" />
+              <Playlist playlistName="AC/DC" cover="bg-[url('../assets/acdc.jpg')]" />
+              <Playlist playlistName="Kiss" cover="bg-[url('../assets/kiss.jpg')]" />
+              <Playlist playlistName="Pink Floyd" cover="bg-[url('../assets/pinkfloyd.svg')]" />
+              <Playlist playlistName="Aerosmith" cover="bg-[url('../assets/aerosmith.jpg')]" />
+              <Playlist playlistName="The Strokes" cover="bg-[url('../assets/thestrokes.png')]" />
 
             </div>
           </div>
@@ -116,42 +92,23 @@ function App() {
           <h1 className='font-bold text-2xl mt-4'>Boa tarde!</h1>
 
           <div className="grid grid-cols-3 gap-4 mt-6">
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 1
-            </div>
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 2
-            </div>
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 3
-            </div>
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 4
-            </div>
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 5
-            </div>
-            <div className='bg-zinc-800 flex items-center gap-2 rounded overflow-hidden'>
-              <img src={californication} alt="" className="w-20" />
-              Playlist 6
-            </div>
+            <MainPlaylist playlistCover={californication} mainPlaylistName={'Red Hot Chilli Peppers'}/>
+            <MainPlaylist playlistCover={nirvana} mainPlaylistName={'Nirvana'}/>
+            <MainPlaylist playlistCover={queen} mainPlaylistName={'Queen'}/>
+            <MainPlaylist playlistCover={aero} mainPlaylistName={'Aerosmith'}/>
+            <MainPlaylist playlistCover={pinkf} mainPlaylistName={'Pink Floyd'}/>
+            <MainPlaylist playlistCover={metallica} mainPlaylistName={'Metallica'}/>
           </div>
 
           <h1 className='font-bold text-2xl mt-4'>Tocados recentemente</h1>
 
-          <div className='flex mt-6 gap-4'>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
-            <div className="h-60 grow bg-zinc-900 flex flex-col rounded p-4 gap-2"><img src={californication} className='rounded' /><div><p className='font-bold xs'>Californication</p><p className='text-zinc-400 text-xs'>de Red Hot Chilli Peppers</p></div></div>
+          <div className='flex mt-6 gap-4 flex-grow'>
+            <RecentlyPlayed name="Red Hot CHilli Peppers" group="Red Hot Chilli Peppers" cover={californication}/>
+            <RecentlyPlayed name="Nirvana" group="Nirvana" cover={nirvana}/>
+            <RecentlyPlayed name="Queen" group="Queen" cover={queen}/>
+            <RecentlyPlayed name="Aerosmith" group="Aerosmith" cover={aero}/>
+            <RecentlyPlayed name="Pink" group="Pink Floyd" cover={pinkf}/>
+            <RecentlyPlayed name="Metallica" group="Metallica" cover={metallica}/>
           </div>
         </main>
       </div>
